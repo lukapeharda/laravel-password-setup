@@ -36,7 +36,7 @@ class PasswordToken
         $params = [$token];
         
         if (config('laravel-password-setup.user_email_in_url')) {
-            $params['email'] = urlencode($user->email);
+            $params['email'] = $user->email;
         }
 
         $url = url(config('app.url') . route('password.setup', $params, false));
