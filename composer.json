@@ -1,0 +1,28 @@
+{
+    "name": "lukapeharda/laravel-password-setup",
+    "description": "Send password setup notification to users created through API",
+    "keywords": ["laravel", "debugbar", "profiler", "debug", "webprofiler"],
+    "license": "mit",
+    "authors": [
+        {
+            "name": "Luka Peharda",
+            "email": "luka.peharda@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0",
+        "laravel/laravel": "^5.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "LukaPeharda\\LaravelPasswordSetup\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LukaPeharda\\LaravelPasswordSetup\\Providers\\PasswordSetupServiceProvider"
+            ]
+        }
+    }
+}
