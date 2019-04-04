@@ -20,7 +20,9 @@ Consider publishing the package to override config or view:
 
 ## Usage
 
-By default, package is set to listen to `LukaPeharda\LaravelPasswordSetup\Events\UserCreated` (which accepts a `$user` model) and then via `LukaPeharda\LaravelPasswordSetup\Listeners\SendNotification` sends a `LukaPeharda\LaravelPasswordSetup\Notifications\SetPassword` notification with generated token to provided user. The user will receive an email with a link to a screen where he needs to enter (and confirm) his new password. After setting it up he will be logged in automatically.
+By default, package is set to listen to `LukaPeharda\LaravelPasswordSetup\Events\UserCreated` (which accepts a `$user` model) and then via `LukaPeharda\LaravelPasswordSetup\Listeners\SendNotification` listener sends a `LukaPeharda\LaravelPasswordSetup\Notifications\SetPassword` notification (with generated token) to provided user. 
+
+The user will receive an email with a link to a screen where he needs to enter (and confirm) his new password. After entering (and confirming) new password, the user will be logged in automatically.
 
 You can adjust or disable some parts of this flow (and substitute it with your own code) in `config/laravel-password-setup.php`.
 
